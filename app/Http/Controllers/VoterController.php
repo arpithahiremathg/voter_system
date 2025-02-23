@@ -52,23 +52,6 @@ class VoterController extends Controller
 
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'first_name' => 'required|string|max:255',
-        //     'last_name' => 'required|string|max:255',
-        //     'dob' => 'required|date|before:-18 years',
-        //     'mobile' => 'required|unique:voters,mobile',
-        //     'email' => 'required|email|unique:voters,email',
-        //     'address' => 'required',
-        //     'taluk' => 'required',
-        //     'district' => 'required',
-        //     'state' => 'required',
-        // ]);
-
-        // $voter = Voter::create($request->all());
-
-        // Mail::to($voter->email)->send(new VoterRegistered($voter));
-
-        // return redirect()->route('voters.index')->with('success', 'Voter registered successfully.');
         try {
             $request->validate([
                 'first_name' => 'required|string|max:255',
